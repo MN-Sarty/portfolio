@@ -5,6 +5,60 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About Me</title>
         <style>
+            @media (max-width: 600px) {
+            h1 {
+                font-size: 30px;
+                padding-left: 10px;
+            }
+            p {
+                font-size: 16px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            hr {
+                margin: 20px 20px;
+            }
+            .sidebar {
+                width: 200px;
+                padding: 90px 20px 20px;
+            }
+            .page-content p {
+                padding: 20px;
+                padding-top: 10px;
+            }
+            .page-content h1 {
+                padding-left: 20px;
+                padding-top: 20px;
+            }
+            .page-content.shifted {
+                transform: none; /* No shift for small screens */
+            }
+            .menu-button {
+                top: 10px;
+                left: 0px;
+                width: 35px;
+                height: 35px;
+            }
+        }
+        @media (max-width: 1000px) {
+            h1 {
+                font-size: 35px;
+                padding-left: 20px;
+            }
+            p {
+                font-size: 18px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .sidebar {
+                width: 220px;
+                padding: 90px 20px 20px;
+            }
+            .page-content p {
+                padding: 20px;
+                padding-top: 10px;
+            }
+        }
             body {
                 background-color: #ede6d9; 
                 color: #342519; 
@@ -20,6 +74,8 @@
                 text-align: left;
                 padding-left: 260px;
                 padding-right: 260px;
+                max-width: 700px;
+                line-height: 1.6;
             }
             hr {
                 border: 1px solid #342519;
@@ -134,9 +190,21 @@
             }
             .page-content {
                 transition: transform 0.35s ease;
+                width: 90%;
+                max-width: 1000px;
+                margin: 0 auto;
             }
             .page-content.shifted {
                 transform: translateX(250px); /* Shift the content to the right when the sidebar is open */
+            }
+            ::selection {
+                background-color: #342519;
+                color: #ede6d9;
+            }
+            html {
+                scroll-behavior: smooth;
+                scrollbar-color: #342519 #ede6d9;
+                scrollbar-width: auto;
             }
         </style>
     </head>
